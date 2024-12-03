@@ -26,7 +26,6 @@ Route::controller(LoginController::class)->group(function () {
     Route::post('/authenticate', 'authenticate')->name('authenticate');
     Route::post('/logout', 'logout')->name('logout');
 });
-
 Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
 
 Route::prefix('/transaksi')->group(function () {
