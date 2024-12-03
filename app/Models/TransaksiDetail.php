@@ -2,12 +2,12 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class TransaksiDetail extends Model
 {
-    use HasFactory;
+    use SoftDeletes;
 
     protected $table = 'transaksi_detail';
 
@@ -22,6 +22,6 @@ class TransaksiDetail extends Model
 
     public function transaksi()
     {
-        return $this->belongsTo(Transaksi::class, 'id_transaksi', 'id'); 
+        return $this->belongsTo(Transaksi::class, 'id_transaksi', 'id');
     }
 }
